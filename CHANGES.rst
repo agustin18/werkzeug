@@ -294,6 +294,9 @@ Version 3.2.0
     :issue:`3328`
 -   Colorama is never used. Modern Windows terminals support ANSI styles
     natively. :pr:`3331`
+-   The multipart parser accounts for the complete boundary delimiter length
+    when checking for partial boundaries, preventing a spurious trailing byte
+    when data arrives chunked near a boundary. :issue:`3285`
 
 
 Version 3.1.9
